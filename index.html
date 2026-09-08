@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shaw Asphalters — Hamilton's asphalt specialists. Driveways, car parks, roading, road reinstatement and more across the Waikato. Get a quote today.">
+  <meta name="keywords" content="asphalt Hamilton, asphalt Waikato, driveway asphalt Hamilton, car park asphalt, road reinstatement Waikato, asphalt contractors Hamilton">
+  <title>Shaw Asphalters | Hamilton's Asphalt Specialists</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --red: #C8102E; --black: #0D0D0D; --surface: #161616; --surface2: #1F1F1F; --white: #F5F5F5; --grey: #888; --font-display: 'Barlow Condensed', sans-serif; --font-body: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--white); font-family: var(--font-body); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.12); height: 100px; }
+    .nav-inner { width: 100%; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; }
+    .nav-logo { margin-left: 15%; }
+    
+    .nav-logo img { height: 70px; width: auto; }
+    
+    .nav-links { display: flex; gap: 40px; list-style: none; }
+    .nav-links a { color: #C8102E; text-decoration: none; font-size: 20px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { }
+    .nav-cta:hover { }
+    .hero { position: relative; height: 100vh; min-height: 600px; display: flex; align-items: flex-end; padding: 0 48px 80px; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background-image: url('images/photo2.jpg'); background-size: cover; background-position: center 40%; filter: brightness(0.45); }
+    .hero-content { position: relative; max-width: 760px; }
+    .hero-location { font-size: 13px; font-weight: 500; color: var(--red); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px; }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(56px, 8vw, 104px); font-weight: 800; line-height: 0.92; letter-spacing: -0.01em; text-transform: uppercase; color: var(--white); margin-bottom: 28px; }
+    .hero-sub { font-size: 18px; color: rgba(245,245,245,0.72); max-width: 480px; margin-bottom: 40px; line-height: 1.5; }
+    .hero-actions { display: flex; gap: 16px; align-items: center; }
+    .btn-primary { background: var(--red); color: var(--white); padding: 16px 36px; font-size: 15px; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.2s; }
+    .btn-primary:hover { background: #a50d24; }
+    .btn-ghost { color: var(--white); font-size: 15px; font-weight: 500; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 2px; transition: border-color 0.2s; }
+    .btn-ghost:hover { border-color: var(--white); }
+    .slash-divider { height: 6px; background: var(--red); transform: skewX(-12deg); transform-origin: left; margin: 0 48px; }
+    .services { padding: 96px 48px; }
+    .section-label { font-size: 12px; font-weight: 600; color: var(--red); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+    .section-heading { font-family: var(--font-display); font-size: clamp(36px, 5vw, 56px); font-weight: 700; text-transform: uppercase; line-height: 1; margin-bottom: 56px; max-width: 600px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2px; }
+    .service-tile { background: var(--surface); padding: 36px 32px; border-left: 3px solid transparent; transition: border-color 0.2s, background 0.2s; }
+    .service-tile:hover { border-left-color: var(--red); background: var(--surface2); }
+    .service-tile h3 { font-family: var(--font-display); font-size: 26px; font-weight: 700; text-transform: uppercase; margin-bottom: 12px; line-height: 1.1; }
+    .service-tile p { font-size: 14px; color: var(--grey); line-height: 1.6; }
+    .projects { padding: 96px 48px; background: var(--surface); }
+    .photo-grid { display: grid; grid-template-columns: 1.4fr 1fr; grid-template-rows: 340px 340px; gap: 4px; margin-top: 56px; }
+    .photo-grid-item { overflow: hidden; position: relative; }
+    .photo-grid-item:first-child { grid-row: 1 / 3; }
+    .photo-grid-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; filter: brightness(0.85); }
+    .photo-grid-item:hover img { transform: scale(1.03); filter: brightness(1); }
+    .photo-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 16px 20px; background: linear-gradient(transparent, rgba(0,0,0,0.7)); font-size: 13px; color: rgba(245,245,245,0.8); font-weight: 500; }
+    .why { padding: 96px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .why-content .section-heading { margin-bottom: 32px; }
+    .why-content p { color: rgba(245,245,245,0.72); margin-bottom: 20px; max-width: 480px; font-size: 16px; }
+    .why-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .stat-block { background: var(--surface); padding: 36px 28px; }
+    .stat-number { font-family: var(--font-display); font-size: 56px; font-weight: 800; color: var(--red); line-height: 1; margin-bottom: 8px; }
+    .stat-label { font-size: 14px; color: var(--grey); }
+    .enquiry { padding: 96px 48px; background: var(--surface); }
+    .enquiry-inner { max-width: 760px; }
+    .enquiry .section-heading { margin-bottom: 48px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label { font-size: 12px; font-weight: 600; color: var(--grey); letter-spacing: 0.06em; text-transform: uppercase; }
+    .form-group input, .form-group select, .form-group textarea { background: var(--black); border: 1px solid rgba(255,255,255,0.1); color: var(--white); padding: 14px 16px; font-size: 15px; font-family: var(--font-body); outline: none; transition: border-color 0.2s; appearance: none; border-radius: 0; }
+    .form-group select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
+    .form-group select option { background: var(--black); }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--red); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .file-upload { background: var(--black); border: 1px dashed rgba(255,255,255,0.2); padding: 24px; text-align: center; cursor: pointer; transition: border-color 0.2s; }
+    .file-upload:hover { border-color: var(--red); }
+    .file-upload input { display: none; }
+    .file-upload-label { font-size: 14px; color: var(--grey); cursor: pointer; }
+    .file-upload-label span { color: var(--red); }
+    .form-submit { margin-top: 8px; }
+    .form-message { display: none; padding: 16px; font-size: 14px; margin-top: 16px; }
+    .form-message.success { background: rgba(200,16,46,0.1); border-left: 3px solid var(--red); color: var(--white); }
+    .form-message.error { background: rgba(255,100,100,0.1); border-left: 3px solid #ff6464; color: #ff6464; }
+    footer { background: var(--black); border-top: 1px solid rgba(255,255,255,0.06); padding: 48px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .footer-logo img { height: 70px; width: auto; filter: brightness(0) invert(1); opacity: 0.8; }
+    .footer-contact { font-size: 14px; color: var(--grey); }
+    .footer-contact a { color: var(--white); text-decoration: none; }
+    .footer-copy { font-size: 13px; color: rgba(136,136,136,0.5); }
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; height: 80px; } .nav-logo img { height: 56px; } .nav-links { display: none; }
+      .hero { padding: 0 24px 64px; } .slash-divider { margin: 0 24px; }
+      .services, .projects, .why, .enquiry { padding: 64px 24px; }
+      .why { grid-template-columns: 1fr; gap: 48px; }
+      .photo-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .photo-grid-item:first-child { grid-row: auto; height: 300px; } .photo-grid-item { height: 240px; }
+      .form-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; align-items: flex-start; padding: 32px 24px; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+  .nav-inner { max-width: 1200px; margin: 0 auto; width: 100%; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+    <a href="#" class="nav-logo"><img src="images/logo.png" alt="Shaw Asphalters"></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Our Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#enquiry" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-location">Hamilton-based. Waikato-wide.</p>
+      <h1>Asphalt laid right.</h1>
+      <p class="hero-sub">Driveways, car parks, roading, and road reinstatement — delivered on time by a team that takes pride in every layer.</p>
+      <div class="hero-actions">
+        <a href="#enquiry" class="btn-primary">Get a Quote</a>
+        <a href="#projects" class="btn-ghost">See our work</a>
+      </div>
+    </div>
+  </section>
+  <div class="slash-divider"></div>
+  <section class="services" id="services">
+    <p class="section-label">What we do</p>
+    <h2 class="section-heading">Full asphalt services across the Waikato</h2>
+    <div class="services-grid">
+      <div class="service-tile"><h3>Driveways &amp; Entranceways</h3><p>Residential and commercial driveways finished to a high standard. Clean edges, proper base preparation, built to last.</p></div>
+      <div class="service-tile"><h3>Car Parks</h3><p>From small commercial lots to large-scale developments. We manage line marking, drainage, and full surface preparation.</p></div>
+      <div class="service-tile"><h3>Roading</h3><p>Private roads, subdivision roading, and access ways. We work alongside civil contractors and developers throughout the Waikato.</p></div>
+      <div class="service-tile"><h3>Road Reinstatement</h3><p>Utility reinstatement work that matches existing surface levels and blends to the surrounding road — done properly the first time.</p></div>
+      <div class="service-tile"><h3>Pothole Repairs</h3><p>Fast, clean pothole patching for councils, property managers, and businesses. We cut out, clean, and reinstate properly.</p></div>
+      <div class="service-tile"><h3>Footpaths</h3><p>Asphalt footpaths for residential developments and commercial properties. Smooth, consistent, and council-compliant.</p></div>
+    </div>
+  </section>
+  <section class="projects" id="projects">
+    <p class="section-label">Recent work</p>
+    <h2 class="section-heading">Projects we're proud of</h2>
+    <div class="photo-grid">
+      <div class="photo-grid-item"><img src="images/photo3.jpg" alt="Commercial car park — Hamilton"><span class="photo-caption">Commercial car park — Hamilton</span></div>
+      <div class="photo-grid-item"><img src="images/photo2.jpg" alt="Subdivision roading — Hamilton"><span class="photo-caption">Subdivision roading — Hamilton</span></div>
+      <div class="photo-grid-item"><img src="images/photo1.jpg" alt="Development car park — Waikato"><span class="photo-caption">Development car park — Waikato</span></div>
+    </div>
+  </section>
+  <section class="why" id="about">
+    <div class="why-content">
+      <p class="section-label">About Shaw</p>
+      <h2 class="section-heading">Local knowledge. Proper results.</h2>
+      <p>Shaw Asphalters has been laying asphalt across Hamilton and the Waikato for years. We work with civil contractors, developers, property managers, and homeowners — and we bring the same standard to every job, regardless of size.</p>
+      <p>We're not a franchise or a national chain. We're a Hamilton-based business that knows the region, understands the conditions, and stands behind our work.</p>
+      <a href="#enquiry" class="btn-primary" style="margin-top:12px;">Get in touch</a>
+    </div>
+    <div class="why-stats">
+      <div class="stat-block"><div class="stat-number">100%</div><div class="stat-label">Waikato-based team</div></div>
+      <div class="stat-block"><div class="stat-number">All</div><div class="stat-label">Asphalt services under one roof</div></div>
+      <div class="stat-block"><div class="stat-number">Fast</div><div class="stat-label">Quote turnaround</div></div>
+      <div class="stat-block"><div class="stat-number">Free</div><div class="stat-label">Site visits &amp; quotes</div></div>
+    </div>
+  </section>
+  <section class="enquiry" id="enquiry">
+    <div class="enquiry-inner">
+      <p class="section-label">Get a quote</p>
+      <h2 class="section-heading">Tell us about your project</h2>
+      <form id="enquiryForm">
+        <div class="form-grid">
+          <div class="form-group"><label for="firstName">First name</label><input type="text" id="firstName" name="firstName" required placeholder="Reuben"></div>
+          <div class="form-group"><label for="lastName">Last name</label><input type="text" id="lastName" name="lastName" required placeholder="Shaw"></div>
+          <div class="form-group"><label for="company">Company (optional)</label><input type="text" id="company" name="company" placeholder="Shaw Asphalters"></div>
+          <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" required placeholder="07 xxx xxxx"></div>
+          <div class="form-group full"><label for="email">Email</label><input type="email" id="email" name="email" required placeholder="you@example.com"></div>
+          <div class="form-group full"><label for="siteAddress">Site address</label><input type="text" id="siteAddress" name="siteAddress" required placeholder="123 Example Street, Hamilton"></div>
+          <div class="form-group full">
+            <label for="jobType">Type of work</label>
+            <select id="jobType" name="jobType" required>
+              <option value="" disabled selected>Select a service</option>
+              <option>Driveway</option><option>Entranceway</option><option>Car Park</option><option>Roading</option><option>Road Reinstatement</option><option>Footpath</option><option>Pothole Repair</option><option>Line Marking</option><option>Other</option>
+            </select>
+          </div>
+          <div class="form-group full"><label for="jobDescription">Tell us more</label><textarea id="jobDescription" name="jobDescription" placeholder="Size of the area, any existing surface, timeline, or anything else that's helpful..."></textarea></div>
+          <div class="form-group full">
+            <div class="file-upload" onclick="document.getElementById('fileUpload').click()">
+              <input type="file" id="fileUpload" accept="image/*,.pdf" multiple>
+              <p class="file-upload-label">Drop photos or plans here, or <span>browse</span></p>
+              <p id="fileNames" style="font-size:12px;color:var(--grey);margin-top:8px;"></p>
+            </div>
+          </div>
+          <div class="form-group full form-submit">
+            <button type="submit" class="btn-primary" style="border:none;cursor:pointer;width:100%;text-align:center;font-size:16px;">Send Enquiry</button>
+          </div>
+        </div>
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-logo"><img src="images/logo.png" alt="Shaw Asphalters"></div>
+    <div class="footer-contact">
+      Hamilton-based. Waikato-wide.<br>119 Colombo Street, Hamilton 3204<br>
+      <a href="tel:+6478466228">07 846 6228</a> &nbsp;·&nbsp;
+      <a href="mailto:info@shawasphalters.co.nz">info@shawasphalters.co.nz</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Shaw Asphalters (2024) Limited</div>
+  </footer>
+  <script>
+    window.addEventListener('scroll', function() {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) { nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+    });
+    document.getElementById('fileUpload').addEventListener('change', function() {
+      document.getElementById('fileNames').textContent = Array.from(this.files).map(f => f.name).join(', ') || '';
+    });
+    document.getElementById('enquiryForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type=submit]');
+      const msg = document.getElementById('formMessage');
+      btn.textContent = 'Sending...'; btn.disabled = true;
+      const data = { firstName: this.firstName.value, lastName: this.lastName.value, company: this.company.value, email: this.email.value, phone: this.phone.value, siteAddress: this.siteAddress.value, jobType: this.jobType.value, jobDescription: this.jobDescription.value };
+      try {
+        const res = await fetch('https://default76e6c92ef87941dcaa9298332f17af.dc.environment.api.powerplatform.com:443/powerautomate/automations/direct/cu/27/workflows/d8634b949c224bdcabb39c2bb99d3e81/triggers/manual/paths/invoke?api-version=1', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+        if (res.ok) { msg.style.display = 'block'; msg.className = 'form-message success'; msg.textContent = "Thanks — we'll be in touch shortly to discuss your project."; this.reset(); document.getElementById('fileNames').textContent = ''; }
+        else { throw new Error(); }
+      } catch(err) { msg.style.display = 'block'; msg.className = 'form-message error'; msg.textContent = 'Something went wrong. Please call us on 07 846 6228 or email reuben@shawasphalters.co.nz'; }
+      btn.textContent = 'Send Enquiry'; btn.disabled = false;
+    });
+  </script>
+</body>
+</html>
