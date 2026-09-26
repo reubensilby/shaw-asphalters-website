@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Shaw Asphalters — Hamilton's asphalt specialists. Driveways, car parks, roading, road reinstatement and more across the Waikato. Get a quote today.">
+  <meta name="description" content="Shaw Asphalters â Hamilton's asphalt specialists. Driveways, car parks, roading, road reinstatement and more across the Waikato. Get a quote today.">
   <meta name="keywords" content="asphalt Hamilton, asphalt Waikato, driveway asphalt Hamilton, car park asphalt, road reinstatement Waikato, asphalt contractors Hamilton">
   <title>Shaw Asphalters | Hamilton's Asphalt Specialists</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
@@ -99,6 +99,32 @@
     @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
   .nav-inner { max-width: 1200px; margin: 0 auto; width: 100%; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; }
   </style>
+
+  <style>
+    .footer-team-login { margin-top: 24px; }
+    .team-login-btn {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 11px;
+      color: #333;
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.3;
+      transition: opacity 0.2s;
+    }
+    .team-login-btn:hover { opacity: 0.7; }
+  </style>
+  <script>
+    // Toggle to true when a vacancy is listed
+    const SHOW_VACANCIES = false;
+    document.addEventListener('DOMContentLoaded', function() {
+      if (SHOW_VACANCIES) {
+        var el = document.getElementById('nav-careers');
+        if (el) el.style.display = '';
+      }
+    });
+  </script>
 </head>
 <body>
   <nav>
@@ -109,6 +135,7 @@
       <li><a href="#projects">Our Work</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#enquiry" class="nav-cta">Get a Quote</a></li>
+      <li id="nav-careers" style="display:none"><a href="careers.html">Careers</a></li>
     </ul>
     </div>
   </nav>
@@ -117,7 +144,7 @@
     <div class="hero-content">
       <p class="hero-location">Hamilton-based. Waikato-wide.</p>
       <h1>Asphalt laid right.</h1>
-      <p class="hero-sub">Driveways, car parks, roading, and road reinstatement — delivered on time by a team that takes pride in every layer.</p>
+      <p class="hero-sub">Driveways, car parks, roading, and road reinstatement â delivered on time by a team that takes pride in every layer.</p>
       <div class="hero-actions">
         <a href="#enquiry" class="btn-primary">Get a Quote</a>
         <a href="#projects" class="btn-ghost">See our work</a>
@@ -132,7 +159,7 @@
       <div class="service-tile"><h3>Driveways &amp; Entranceways</h3><p>Residential and commercial driveways finished to a high standard. Clean edges, proper base preparation, built to last.</p></div>
       <div class="service-tile"><h3>Car Parks</h3><p>From small commercial lots to large-scale developments. We manage line marking, drainage, and full surface preparation.</p></div>
       <div class="service-tile"><h3>Roading</h3><p>Private roads, subdivision roading, and access ways. We work alongside civil contractors and developers throughout the Waikato.</p></div>
-      <div class="service-tile"><h3>Road Reinstatement</h3><p>Utility reinstatement work that matches existing surface levels and blends to the surrounding road — done properly the first time.</p></div>
+      <div class="service-tile"><h3>Road Reinstatement</h3><p>Utility reinstatement work that matches existing surface levels and blends to the surrounding road â done properly the first time.</p></div>
       <div class="service-tile"><h3>Pothole Repairs</h3><p>Fast, clean pothole patching for councils, property managers, and businesses. We cut out, clean, and reinstate properly.</p></div>
       <div class="service-tile"><h3>Footpaths</h3><p>Asphalt footpaths for residential developments and commercial properties. Smooth, consistent, and council-compliant.</p></div>
     </div>
@@ -141,16 +168,16 @@
     <p class="section-label">Recent work</p>
     <h2 class="section-heading">Projects we're proud of</h2>
     <div class="photo-grid">
-      <div class="photo-grid-item"><img src="images/photo3.jpg" alt="Commercial car park — Hamilton"><span class="photo-caption">Commercial car park — Hamilton</span></div>
-      <div class="photo-grid-item"><img src="images/photo2.jpg" alt="Subdivision roading — Hamilton"><span class="photo-caption">Subdivision roading — Hamilton</span></div>
-      <div class="photo-grid-item"><img src="images/photo1.jpg" alt="Development car park — Waikato"><span class="photo-caption">Development car park — Waikato</span></div>
+      <div class="photo-grid-item"><img src="images/photo3.jpg" alt="Commercial car park â Hamilton"><span class="photo-caption">Commercial car park â Hamilton</span></div>
+      <div class="photo-grid-item"><img src="images/photo2.jpg" alt="Subdivision roading â Hamilton"><span class="photo-caption">Subdivision roading â Hamilton</span></div>
+      <div class="photo-grid-item"><img src="images/photo1.jpg" alt="Development car park â Waikato"><span class="photo-caption">Development car park â Waikato</span></div>
     </div>
   </section>
   <section class="why" id="about">
     <div class="why-content">
       <p class="section-label">About Shaw</p>
       <h2 class="section-heading">Local knowledge. Proper results.</h2>
-      <p>Shaw Asphalters has been laying asphalt across Hamilton and the Waikato for years. We work with civil contractors, developers, property managers, and homeowners — and we bring the same standard to every job, regardless of size.</p>
+      <p>Shaw Asphalters has been laying asphalt across Hamilton and the Waikato for years. We work with civil contractors, developers, property managers, and homeowners â and we bring the same standard to every job, regardless of size.</p>
       <p>We're not a franchise or a national chain. We're a Hamilton-based business that knows the region, understands the conditions, and stands behind our work.</p>
       <a href="#enquiry" class="btn-primary" style="margin-top:12px;">Get in touch</a>
     </div>
@@ -200,11 +227,15 @@
     <div class="footer-logo"><img src="images/logo.png" alt="Shaw Asphalters"></div>
     <div class="footer-contact">
       Hamilton-based. Waikato-wide.<br>119 Colombo Street, Hamilton 3204<br>
-      <a href="tel:+6478466228">07 846 6228</a> &nbsp;·&nbsp;
+      <a href="tel:+6478466228">07 846 6228</a> &nbsp;Â·&nbsp;
       <a href="mailto:info@shawasphalters.co.nz">info@shawasphalters.co.nz</a>
     </div>
     <div class="footer-copy">&copy; 2026 Shaw Asphalters (2024) Limited</div>
-  </footer>
+  
+  <div class="footer-team-login" style="display:none">
+    <a href="#" class="team-login-btn">Team Login</a>
+  </div>
+</footer>
   <script>
     window.addEventListener('scroll', function() {
       const nav = document.querySelector('nav');
@@ -221,7 +252,7 @@
       const data = { firstName: this.firstName.value, lastName: this.lastName.value, company: this.company.value, email: this.email.value, phone: this.phone.value, siteAddress: this.siteAddress.value, jobType: this.jobType.value, jobDescription: this.jobDescription.value };
       try {
         const res = await fetch('https://default76e6c92ef87941dcaa9298332f17af.dc.environment.api.powerplatform.com:443/powerautomate/automations/direct/cu/27/workflows/d8634b949c224bdcabb39c2bb99d3e81/triggers/manual/paths/invoke?api-version=1', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
-        if (res.ok) { msg.style.display = 'block'; msg.className = 'form-message success'; msg.textContent = "Thanks — we'll be in touch shortly to discuss your project."; this.reset(); document.getElementById('fileNames').textContent = ''; }
+        if (res.ok) { msg.style.display = 'block'; msg.className = 'form-message success'; msg.textContent = "Thanks â we'll be in touch shortly to discuss your project."; this.reset(); document.getElementById('fileNames').textContent = ''; }
         else { throw new Error(); }
       } catch(err) { msg.style.display = 'block'; msg.className = 'form-message error'; msg.textContent = 'Something went wrong. Please call us on 07 846 6228 or email reuben@shawasphalters.co.nz'; }
       btn.textContent = 'Send Enquiry'; btn.disabled = false;
